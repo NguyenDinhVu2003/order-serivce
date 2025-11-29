@@ -55,7 +55,7 @@ pipeline {
                     cd deployment-service
                     git config user.email "jenkins@ci.com"
                     git config user.name "Jenkins CI"
-                    sed -i "s|image:.*|image: nguyendinhvu/restaurant-server:${VERSION}|" aws/order-manifest.yml
+                    sed -i "s|image:.*|image: nguyendinhvu/order-service:${VERSION}|" aws/order-manifest.yml
                     git add .
                     git commit -m "Update image tag to ${VERSION}"
                     git push
